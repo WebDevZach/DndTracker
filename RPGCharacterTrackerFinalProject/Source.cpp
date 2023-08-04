@@ -19,8 +19,7 @@ using namespace std;
 int main()
 {
 
-	string name;
-
+	Character meep("slgh", "sdfa", "sadf") ;
 
 
 	return 0;
