@@ -1,3 +1,4 @@
 ﻿  Source.cpp
-C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\RPGCharacterTrackerFinalProject\Chararcter.h(27,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\RPGCharacterTrackerFinalProject\Chararcter.h(29,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\RPGCharacterTrackerFinalProject\Chararcter.h(40,7): warning C4101: 'choice': unreferenced local variable
   RPGCharacterTrackerFinalProject.vcxproj -> C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\x64\Debug\RPGCharacterTrackerFinalProject.exe

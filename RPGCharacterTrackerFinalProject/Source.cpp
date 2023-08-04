@@ -20,6 +20,8 @@ int main()
 {
 
 	Character meep("slgh", "sdfa", "sadf") ;
+	cout << endl << endl;
+	cout << meep.strength;
 
 
 	return 0;
