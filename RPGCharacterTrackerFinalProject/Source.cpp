@@ -21,7 +21,7 @@ int main()
 
 	Character meep("slgh", "sdfa", "sadf") ;
 	cout << endl << endl;
-	cout << meep.strength;
+	cout << meep.getStrength();
 
 
 	return 0;
