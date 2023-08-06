@@ -12,17 +12,19 @@ Final Project RPG/Dnd character party tracker
 
 #include <iostream>
 #include "Chararcter.h"
+#include "Warrior.h"
+#include "Wizard.h"
+#include "Rogue.h"
 
 using namespace std;
 
 
 int main()
 {
-
-	Character meep("slgh", "sdfa", "sadf") ;
-	cout << endl << endl;
-	cout << meep.getStrength();
-
+	Wizard meep("asdf", "adf", "adsf");
+	cout << meep.getSpellPower() << endl;
+	cout << meep.getSpellPower() << endl;
+	
 
 	return 0;
 }

@@ -12,7 +12,7 @@ class Character
 private:
 	string name;
 	string race;
-	string backGround;
+	string background;
 	int constitution;
 	int strength;
 	int wisdom;
@@ -21,22 +21,83 @@ private:
 	int intelligence;
 public:
 	Character(string, string, string);
+	void setName(string newName);
+	void setBackground(string background);
+	void setRace(string race);
 	void allocatePoint(int&, string, vector<int>&);
+	string getName()
+	{
+		return name;
+	}
+	string getRace()
+	{
+		return race;
+	}
+	string getBackGround()
+	{
+		return background;
+	}
 	int getStrength()
-	{return strength;}
+	{
+		return strength;
+	}
+	int getConstitution()
+	{
+		return constitution;
+	}
+	int getWisdom()
+	{
+		return wisdom;
+	}
+	int getCharisma()
+	{
+		return charisma;
+	}
+	int getDexerity()
+	{
+		return dexerity;
+	}
+	int getIntelligence()
+	{
+		return intelligence;
+	}
+	void rollStats();
 };
 
-Character::Character(string name, string race, string backGround)
+
+Character::Character(string characterName, string characterRace, string characterBackGround)
+{
+	name = characterName;
+	race = characterRace;
+	background = characterBackGround;
+	rollStats();
+}
+
+void Character::setName(string newName)
+{
+	name = newName;
+}
+
+void Character::setBackground(string newBackground)
+{
+	background = newBackground;
+}
+
+void Character::setRace(string newRace)
+{
+	race = newRace;
+}
+
+void Character::rollStats()
 {
 	srand(time(0));
 
 	const int SIZE = 6;
-	
-	int newSize = 6; 
+
+	int newSize = 6;
 
 	vector<int> stats;
 
-	//Roll a 6 sided dice 4 times discard the lowest number total those numbers then allocated that number to a stat of your choice do this until all 6 stats are allocated
 	for (int y = 0; y < 6; y++)
 	{
 
@@ -51,22 +112,13 @@ Character::Character(string name, string race, string backGround)
 				lowestNumber = randomNumber;
 			}
 
-			cout << "random number: " << randomNumber << endl;
-
 			totalRoll += randomNumber;
-			cout << "total: " << totalRoll << endl;
 		}
-
-		cout << "lowest number: " << lowestNumber << endl;
 
 		totalRoll -= lowestNumber;
 
-		cout << "You have rolled: " << totalRoll << endl;
-
 		stats.push_back(totalRoll);
 	}
-
-	
 
 	string stat;
 
@@ -111,13 +163,8 @@ Character::Character(string name, string race, string backGround)
 			break;
 		}
 		}
-
-
 	}
-
-	
 }
-
 
 void Character::allocatePoint(int& stat, string statValue, vector<int>& stats)
 {
@@ -126,50 +173,29 @@ void Character::allocatePoint(int& stat, string statValue, vector<int>& stats)
 	int choice;
 
 	size_t numOfStats = stats.size();
-	
-		do {
-			for (int z = 0; z < numOfStats; z++) {
-				cout << stats[z] << " ";
-			}
 
-			cout << "\nAllocate a number above for your " << statValue << " stat: ";
-			cin >> choice;
+	do {
+		for (int z = 0; z < numOfStats; z++) {
+			cout << stats[z] << " ";
+		}
 
-			for (int z = 0; z < numOfStats && found == -1; z++) {
-				if (stats[z] == choice) {
-					found = 1;
-					stat = stats[z];
-					int lastValue = stats[numOfStats - 1];
-					int temp = lastValue;
-					lastValue = stats[z];
-					stats[z] = temp;
-				}
+		cout << "\nAllocate a number above for your " << statValue << " stat: ";
+		cin >> choice;
+
+		for (int z = 0; z < numOfStats && found == -1; z++) {
+			if (stats[z] == choice) {
+				found = 1;
+				stat = stats[z];
+				int lastValue = stats[numOfStats - 1];
+				int temp = lastValue;
+				lastValue = stats[z];
+				stats[z] = temp;
 			}
-		} while (found == -1);
-		
-		stats.pop_back();
+		}
+	} while (found == -1);
+
+	stats.pop_back();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #endif // !1
 
