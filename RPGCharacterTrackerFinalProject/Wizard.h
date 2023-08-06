@@ -1,4 +1,4 @@
-#include <iostream>
+
 using namespace std;
 
 #ifndef WIZARD_H
@@ -14,7 +14,7 @@ private:
     int spellResistance;      
     int summoningProficiency; 
 public:
-    Wizard(string, string ,string);
+    Wizard(Character);
     int getSpellPower()
     {
         return spellPower;
@@ -33,13 +33,12 @@ public:
     }
 };
 
-Wizard::Wizard(string name, string race, string background)
-    : Character(name, race, background)
+Wizard::Wizard(Character wizard)
 {
-    spellPower = getIntelligence() * 2;
-    manaPool = (getIntelligence() * 2) + getWisdom();
-    spellResistance = getWisdom();
-    summoningProficiency = getCharisma();
+    spellPower = wizard.getIntelligence() * 2;
+    manaPool = (wizard.getIntelligence() * 2) + wizard.getWisdom();
+    spellResistance = wizard.getWisdom();
+    summoningProficiency = wizard.getCharisma();
 }
 
 

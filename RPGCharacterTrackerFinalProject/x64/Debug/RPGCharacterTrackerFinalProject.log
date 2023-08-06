@@ -1,3 +1,8 @@
 ﻿  Source.cpp
-C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\RPGCharacterTrackerFinalProject\Chararcter.h(93,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\RPGCharacterTrackerFinalProject\Chararcter.h(98,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\RPGCharacterTrackerFinalProject\Chararcter.h(208,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\RPGCharacterTrackerFinalProject\Chararcter.h(209,28): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\RPGCharacterTrackerFinalProject\Chararcter.h(210,40): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\RPGCharacterTrackerFinalProject\Warrior.h(40,35): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\RPGCharacterTrackerFinalProject\Rogue.h(40,43): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
   RPGCharacterTrackerFinalProject.vcxproj -> C:\Users\JLeye\source\repos\RPGCharacterTrackerFinalProject\x64\Debug\RPGCharacterTrackerFinalProject.exe

@@ -9,20 +9,39 @@ using namespace std;
 class Rogue : public Character
 {
 private:
-    bool isStealth;        
-    int lockpickingSkill;   
+    int lockpickingSkill;
     int trapDetectionSkill;
-    bool dualWielding;    
-    int pickpocketSkill;    
+    int pickpocketSkill;
     int dodgeChance;
 public:
-    void enterStealthMode();
-    void exitStealthMode();
-    bool attemptLockpicking(int difficulty);
-    bool detectTraps();
-    void enableDualWielding();
-    void disableDualWielding();
+    Rogue(Character);
+    int getLockPickingSkill()
+    {
+        return lockpickingSkill;
+    }
+    int getTrapDetectionSkill()
+    {
+        return trapDetectionSkill;
+    }
+    int getPickPocketingSkill()
+    {
+        return pickpocketSkill;
+    }
+    int getDodgeChance()
+    {
+        return dodgeChance;
+    }
 };
+
+Rogue::Rogue(Character rogue)
+{
+    lockpickingSkill = rogue.getDexerity() / 2;
+    trapDetectionSkill = rogue.getWisdom();
+    pickpocketSkill = rogue.getDexerity() / 1.5;
+    dodgeChance = rogue.getDexerity();
+}
+
+
 
 
 
